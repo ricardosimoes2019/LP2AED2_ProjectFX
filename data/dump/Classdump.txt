@@ -1,0 +1,230 @@
+Class Dump File:
+
+Turma{id='LII', year=2020, limitStudents=9, type='PL', teacher=idnumber='23545', name='Cristophe Soares', address='Aveiro', birth=12/2/1971 0:0, email='csoares@ufp.edu.pt', registration=10/8/2001 0:0}
+Class Aula{id=9, horaInicio=14:0, horaFim=16:0, classroom=id='200', limit_students=10, piso=2}, deleted
+Class removed from Classroom: 200
+Class removed from UC: Laboratório de Projeto Integrado
+Class removed from Teacher: idnumber='23545', name='Cristophe Soares', address='Aveiro', birth=12/2/1971 0:0, email='csoares@ufp.edu.pt', registration=10/8/2001 0:0
+Class removed from this Students:
+Person{idnumber='9827525', name='Ana Beleza', address='Sintra', birth=31/1/1999 0:0, email='anabeleza@gmail.com', age='21, registration=5/9/2017 0:0}
+Person{idnumber='325325462', name='Anabela Silva', address='Lisboa', birth=19/4/1994 0:0, email='anabelasilvar@gmail.com', age='26, registration=3/9/2014 0:0}
+Person{idnumber='9832571', name='José Alves', address='Algarve', birth=25/10/1997 0:0, email='josealves@gmail.com', age='22, registration=10/9/2013 0:0}
+
+Turma{id='LIP', year=2020, limitStudents=8, type='PL', teacher=null}
+Class removed from UC: Laboratório de Projeto Integrado
+Class removed from Teacher: null
+Class removed from this Students:
+
+Turma{id='LII', year=2020, limitStudents=9, type='PL', teacher=idnumber='23545', name='Cristophe Soares', address='Aveiro', birth=12/2/1971 0:0, email='csoares@ufp.edu.pt', registration=10/8/2001 0:0}
+Class Aula{id=9, horaInicio=14:0, horaFim=16:0, classroom=id='200', limit_students=10, piso=2}, deleted
+Class removed from Classroom: 200
+Class removed from UC: Laboratório de Projeto Integrado
+Class removed from Teacher: idnumber='23545', name='Cristophe Soares', address='Aveiro', birth=12/2/1971 0:0, email='csoares@ufp.edu.pt', registration=10/8/2001 0:0
+Class removed from this Students:
+Person{idnumber='9827525', name='Ana Beleza', address='Sintra', birth=31/1/1999 0:0, email='anabeleza@gmail.com', age='21, registration=5/9/2017 0:0}
+Person{idnumber='325325462', name='Anabela Silva', address='Lisboa', birth=19/4/1994 0:0, email='anabelasilvar@gmail.com', age='26, registration=3/9/2014 0:0}
+Person{idnumber='9832571', name='José Alves', address='Algarve', birth=25/10/1997 0:0, email='josealves@gmail.com', age='22, registration=10/9/2013 0:0}
+
+Turma{id='LIP', year=2020, limitStudents=8, type='PL', teacher=null}
+Class removed from UC: Laboratório de Projeto Integrado
+Class removed from Teacher: null
+Class removed from this Students:
+
+Turma{id='LII', year=2020, limitStudents=9, type='PL', teacher=idnumber='23545', name='Cristophe Soares', address='Aveiro', birth=12/2/1971 0:0, email='csoares@ufp.edu.pt', registration=10/8/2001 0:0}
+Class Aula{id=9, horaInicio=14:0, horaFim=16:0, classroom=id='200', limit_students=10, piso=2}, deleted
+Class removed from Classroom: 200
+Class removed from UC: Laboratório de Projeto Integrado
+Class removed from Teacher: idnumber='23545', name='Cristophe Soares', address='Aveiro', birth=12/2/1971 0:0, email='csoares@ufp.edu.pt', registration=10/8/2001 0:0
+Class removed from this Students:
+Person{idnumber='9827525', name='Ana Beleza', address='Sintra', birth=31/1/1999 0:0, email='anabeleza@gmail.com', age='21, registration=5/9/2017 0:0}
+Person{idnumber='325325462', name='Anabela Silva', address='Lisboa', birth=19/4/1994 0:0, email='anabelasilvar@gmail.com', age='26, registration=3/9/2014 0:0}
+Person{idnumber='9832571', name='José Alves', address='Algarve', birth=25/10/1997 0:0, email='josealves@gmail.com', age='22, registration=10/9/2013 0:0}
+
+Turma{id='LIP', year=2020, limitStudents=8, type='PL', teacher=null}
+Class removed from UC: Laboratório de Projeto Integrado
+Class removed from Teacher: null
+Class removed from this Students:
+
+Turma{id='LII', year=2020, limitStudents=9, type='PL', teacher=idnumber='23545', name='Cristophe Soares', address='Aveiro', birth=12/2/1971 0:0, email='csoares@ufp.edu.pt', registration=10/8/2001 0:0}
+Class Aula{id=9, horaInicio=14:0, horaFim=16:0, classroom=id='200', limit_students=10, piso=2}, deleted
+Class removed from Classroom: 200
+Class removed from UC: Laboratório de Projeto Integrado
+Class removed from Teacher: idnumber='23545', name='Cristophe Soares', address='Aveiro', birth=12/2/1971 0:0, email='csoares@ufp.edu.pt', registration=10/8/2001 0:0
+Class removed from this Students:
+Person{idnumber='9827525', name='Ana Beleza', address='Sintra', birth=31/1/1999 0:0, email='anabeleza@gmail.com', age='21, registration=5/9/2017 0:0}
+Person{idnumber='325325462', name='Anabela Silva', address='Lisboa', birth=19/4/1994 0:0, email='anabelasilvar@gmail.com', age='26, registration=3/9/2014 0:0}
+Person{idnumber='9832571', name='José Alves', address='Algarve', birth=25/10/1997 0:0, email='josealves@gmail.com', age='22, registration=10/9/2013 0:0}
+
+Turma{id='LIP', year=2020, limitStudents=8, type='PL', teacher=null}
+Class removed from UC: Laboratório de Projeto Integrado
+Class removed from Teacher: null
+Class removed from this Students:
+
+Removed at: 6/6/2020 19:40
+
+BHF
+Class 14, deleted
+Class removed from UC: Linguagens de Programação 2
+Class removed from Teacher: Ana Beatriz Gomes
+Class removed from this Students:
+
+Removed at: 6/6/2020 19:40
+
+BHV
+Class 10, deleted
+Class removed from Classroom: 109
+Class removed from UC: Linguagens de Programação 2
+Class removed from Teacher: Rui Moreira
+Class removed from this Students:
+Person{, name='Sandra Veloso', address='Porto', birth=23/6/1998 0:0, email='sandraveloso@gmail.com', age='21, registration=5/9/2015 0:0}
+Person{, name='Ricardo Simões', address='Fiais', birth=19/5/1998 0:0, email='ricardosimoes@gmail.com', age='22, registration=3/9/2016 0:0}
+Person{, name='Fábio Rocha', address='Rua de Santa Isabel, 966', birth=12/12/1997 0:0, email='marcelorocha876.mr@gmail.com', age='22, registration=8/9/2016 0:0}
+Person{, name='José Alves', address='Algarve', birth=25/10/1997 0:0, email='josealves@gmail.com', age='22, registration=10/9/2013 0:0}
+
+Removed at: 6/6/2020 19:40
+
+BHT
+Class 3, deleted
+Class removed from Classroom: 106
+Class removed from UC: Linguagens de Programação 2
+Class removed from Teacher: Ana Beatriz Gomes
+Class removed from this Students:
+Person{, name='Sandra Veloso', address='Porto', birth=23/6/1998 0:0, email='sandraveloso@gmail.com', age='21, registration=5/9/2015 0:0}
+Person{, name='Ricardo Simões', address='Fiais', birth=19/5/1998 0:0, email='ricardosimoes@gmail.com', age='22, registration=3/9/2016 0:0}
+Person{, name='Fábio Rocha', address='Rua de Santa Isabel, 966', birth=12/12/1997 0:0, email='marcelorocha876.mr@gmail.com', age='22, registration=8/9/2016 0:0}
+Person{, name='José Alves', address='Algarve', birth=25/10/1997 0:0, email='josealves@gmail.com', age='22, registration=10/9/2013 0:0}
+
+Removed at: 6/6/2020 20:0
+
+BHF
+Class 14, deleted
+Class removed from UC: Linguagens de Programação 2
+Class removed from Teacher: Ana Beatriz Gomes
+Class removed from this Students:
+
+Removed at: 6/6/2020 20:0
+
+BHV
+Class 10, deleted
+Class removed from Classroom: 109
+Class removed from UC: Linguagens de Programação 2
+Class removed from Teacher: Rui Moreira
+Class removed from this Students:
+Person{, name='Sandra Veloso', address='Porto', birth=23/6/1998 0:0, email='sandraveloso@gmail.com', age='21, registration=5/9/2015 0:0}
+Person{, name='Ricardo Simões', address='Fiais', birth=19/5/1998 0:0, email='ricardosimoes@gmail.com', age='22, registration=3/9/2016 0:0}
+Person{, name='Fábio Rocha', address='Rua de Santa Isabel, 966', birth=12/12/1997 0:0, email='marcelorocha876.mr@gmail.com', age='22, registration=8/9/2016 0:0}
+Person{, name='José Alves', address='Algarve', birth=25/10/1997 0:0, email='josealves@gmail.com', age='22, registration=10/9/2013 0:0}
+
+Removed at: 6/6/2020 20:0
+
+BHT
+Class 3, deleted
+Class removed from Classroom: 106
+Class removed from UC: Linguagens de Programação 2
+Class removed from Teacher: Ana Beatriz Gomes
+Class removed from this Students:
+Person{, name='Sandra Veloso', address='Porto', birth=23/6/1998 0:0, email='sandraveloso@gmail.com', age='21, registration=5/9/2015 0:0}
+Person{, name='Ricardo Simões', address='Fiais', birth=19/5/1998 0:0, email='ricardosimoes@gmail.com', age='22, registration=3/9/2016 0:0}
+Person{, name='Fábio Rocha', address='Rua de Santa Isabel, 966', birth=12/12/1997 0:0, email='marcelorocha876.mr@gmail.com', age='22, registration=8/9/2016 0:0}
+Person{, name='José Alves', address='Algarve', birth=25/10/1997 0:0, email='josealves@gmail.com', age='22, registration=10/9/2013 0:0}
+
+Removed at: 6/6/2020 20:2
+
+BHF
+Class 14, deleted
+Class removed from UC: Linguagens de Programação 2
+Class removed from Teacher: Ana Beatriz Gomes
+Class removed from this Students:
+
+Removed at: 6/6/2020 20:2
+
+BHV
+Class 10, deleted
+Class removed from Classroom: 109
+Class removed from UC: Linguagens de Programação 2
+Class removed from Teacher: Rui Moreira
+Class removed from this Students:
+Person{, name='Sandra Veloso', address='Porto', birth=23/6/1998 0:0, email='sandraveloso@gmail.com', age='21, registration=5/9/2015 0:0}
+Person{, name='Ricardo Simões', address='Fiais', birth=19/5/1998 0:0, email='ricardosimoes@gmail.com', age='22, registration=3/9/2016 0:0}
+Person{, name='Fábio Rocha', address='Rua de Santa Isabel, 966', birth=12/12/1997 0:0, email='marcelorocha876.mr@gmail.com', age='22, registration=8/9/2016 0:0}
+Person{, name='José Alves', address='Algarve', birth=25/10/1997 0:0, email='josealves@gmail.com', age='22, registration=10/9/2013 0:0}
+
+Removed at: 6/6/2020 20:2
+
+BHT
+Class 3, deleted
+Class removed from Classroom: 106
+Class removed from UC: Linguagens de Programação 2
+Class removed from Teacher: Ana Beatriz Gomes
+Class removed from this Students:
+Person{, name='Sandra Veloso', address='Porto', birth=23/6/1998 0:0, email='sandraveloso@gmail.com', age='21, registration=5/9/2015 0:0}
+Person{, name='Ricardo Simões', address='Fiais', birth=19/5/1998 0:0, email='ricardosimoes@gmail.com', age='22, registration=3/9/2016 0:0}
+Person{, name='Fábio Rocha', address='Rua de Santa Isabel, 966', birth=12/12/1997 0:0, email='marcelorocha876.mr@gmail.com', age='22, registration=8/9/2016 0:0}
+Person{, name='José Alves', address='Algarve', birth=25/10/1997 0:0, email='josealves@gmail.com', age='22, registration=10/9/2013 0:0}
+
+Removed at: 10/6/2020 17:28
+
+BGZ
+Class 11, deleted
+Class removed from Classroom: 109
+Class removed from UC: Laboratório de Projeto Integrado
+Class removed from Teacher: Paulo Rurato
+Class removed from this Students:
+Person{, name='Anabela Silva', address='Lisboa', birth=19/4/1994 0:0, email='33456@ufp.edu.pt', age='26, registration=3/9/2014 0:0}
+Person{, name='Ricardo Simões', address='Fiais', birth=19/5/1998 0:0, email='35188@ufp.edu.pt', age='22, registration=3/9/2016 0:0}
+Person{, name='João Raposo', address='Vila Real', birth=9/5/1996 0:0, email='34123@ufp.edu.pt', age='24, registration=3/9/2015 0:0}
+
+Removed at: 10/6/2020 17:28
+
+BGW
+Class 6, deleted
+Class removed from Classroom: 208
+Class removed from UC: Laboratório de Projeto Integrado
+Class removed from Teacher: Paulo Rurato
+Class removed from this Students:
+Person{, name='Anabela Silva', address='Lisboa', birth=19/4/1994 0:0, email='33456@ufp.edu.pt', age='26, registration=3/9/2014 0:0}
+Person{, name='Ricardo Simões', address='Fiais', birth=19/5/1998 0:0, email='35188@ufp.edu.pt', age='22, registration=3/9/2016 0:0}
+Person{, name='João Raposo', address='Vila Real', birth=9/5/1996 0:0, email='34123@ufp.edu.pt', age='24, registration=3/9/2015 0:0}
+
+Removed at: 10/6/2020 17:28
+
+TESTE
+Class 16, deleted
+Class removed from Classroom: 31
+Class removed from UC: Laboratório de Projeto Integrado
+Class removed from Teacher: Paulo Rurato
+Class removed from this Students:
+Person{, name='Ricardo Simões', address='Fiais', birth=19/5/1998 0:0, email='35188@ufp.edu.pt', age='22, registration=3/9/2016 0:0}
+
+Removed at: 10/6/2020 17:30
+
+BGZ
+Class 11, deleted
+Class removed from Classroom: 109
+Class removed from UC: Laboratório de Projeto Integrado
+Class removed from Teacher: Paulo Rurato
+Class removed from this Students:
+Person{, name='Anabela Silva', address='Lisboa', birth=19/4/1994 0:0, email='33456@ufp.edu.pt', age='26, registration=3/9/2014 0:0}
+Person{, name='Ricardo Simões', address='Fiais', birth=19/5/1998 0:0, email='35188@ufp.edu.pt', age='22, registration=3/9/2016 0:0}
+Person{, name='João Raposo', address='Vila Real', birth=9/5/1996 0:0, email='34123@ufp.edu.pt', age='24, registration=3/9/2015 0:0}
+
+Removed at: 10/6/2020 17:30
+
+BGW
+Class 6, deleted
+Class removed from Classroom: 208
+Class removed from UC: Laboratório de Projeto Integrado
+Class removed from Teacher: Paulo Rurato
+Class removed from this Students:
+Person{, name='Anabela Silva', address='Lisboa', birth=19/4/1994 0:0, email='33456@ufp.edu.pt', age='26, registration=3/9/2014 0:0}
+Person{, name='Ricardo Simões', address='Fiais', birth=19/5/1998 0:0, email='35188@ufp.edu.pt', age='22, registration=3/9/2016 0:0}
+Person{, name='João Raposo', address='Vila Real', birth=9/5/1996 0:0, email='34123@ufp.edu.pt', age='24, registration=3/9/2015 0:0}
+
+Removed at: 10/6/2020 17:30
+
+TESTE
+Class 16, deleted
+Class removed from Classroom: 201
+Class removed from UC: Laboratório de Projeto Integrado
+Class removed from Teacher: Paulo Rurato
+Class removed from this Students:

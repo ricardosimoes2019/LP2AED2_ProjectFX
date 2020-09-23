@@ -1,0 +1,28 @@
+Students Dump File:
+
+Removed at: 24/4/2020 18:22
+Person{idnumber='1231412', name='Ricardo Simões', address='Fiais', birth=19/5/1998 0:0, email='ricardosimoes@gmail.com', age='21, registration=3/9/2016 0:0}
+
+Removed at: 24/4/2020 18:40
+Person{idnumber='1231412', name='Ricardo Simões', address='Fiais', birth=19/5/1998 0:0, email='ricardosimoes@gmail.com', age='21, registration=3/9/2016 0:0}
+
+Removed at: 24/4/2020 18:41
+Person{idnumber='1231412', name='Ricardo Simões', address='Fiais', birth=19/5/1998 0:0, email='ricardosimoes@gmail.com', age='21, registration=3/9/2016 0:0}
+
+Removed at: 24/4/2020 18:46
+Person{idnumber='1231412', name='Ricardo Simões', address='Fiais', birth=19/5/1998 0:0, email='ricardosimoes@gmail.com', age='21, registration=3/9/2016 0:0}
+
+Removed at: 7/6/2020 18:14
+Person{, name='Fábio Rocha', address='Rua de Santa Isabel, 966', birth=12/12/1997 0:0, email='35384@ufp.edu.pt', age='22, registration=8/9/2016 0:0}
+
+Removed at: 9/6/2020 23:52
+Person{, name='Ricardo Simões', address='Fiais', birth=19/5/1998 0:0, email='35188@ufp.edu.pt', age='22, registration=3/9/2016 0:0}
+
+Removed at: 9/6/2020 23:53
+Person{, name='Ricardo Simões', address='Fiais', birth=19/5/1998 0:0, email='35188@ufp.edu.pt', age='22, registration=3/9/2016 0:0}
+
+Removed at: 10/6/2020 17:35
+Person{, name='João Raposo', address='Vila Real', birth=9/5/1996 0:0, email='34123@ufp.edu.pt', age='24, registration=3/9/2015 0:0}
+
+Removed at: 10/6/2020 17:36
+Person{, name='José Alves', address='Algarve', birth=25/10/1997 0:0, email='32567@ufp.edu.pt', age='22, registration=10/9/2013 0:0}

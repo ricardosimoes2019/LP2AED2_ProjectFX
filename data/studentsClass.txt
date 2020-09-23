@@ -1,0 +1,18 @@
+idClass;idStudents
+BIV;35384-35621-34123-33456-35124
+BIJ;35384-35621
+BHT;35384-35188-35124-32567
+BIT;35384-36432
+BHI;35188-34123-33456
+BGW;35188-34123-33456
+BGR;35384-35621
+GAT;35188-35621-35124
+BHM;35384-32567
+BHV;35384-35188-35124-32567
+BGZ;35188-34123-33456
+BGP;35384-35621
+BHJ;35384-32567
+ZZZ;35384;  {{erro: não existe nenhuma aula com este id}}
+BHJ;432324; {{erro: não existe nenhum aluno com este número}}
+BHJ;35384;  {{erro: este aluno já existe nesta turma}}
+BIV;35188;  {{erro: esta turma já está cheia}}

@@ -1,0 +1,18 @@
+id;year;limitStudents;idteacher;type;idClass;horaInicio;horaFim;ucId
+BIV;2020;5;36431;TP;1;14:00;16:00:2;AED2
+BIJ;2020;6;23545;TP;2;16:00;18:00:2;HRDS
+BHT;2020;7;31242;PL;3;11:00;13:00:3;LP2
+BIT;2020;8;31242;PL;4;14:00;16:00:3;AED2
+BHI;2020;9;34212;PL;5;14:00;16:00:3;SO
+BGW;2020;7;35662;TP;6;16:00;18:00:3;LPI
+BGR;2020;8;36512;TP;7;18:00;20:00:3;MUL2
+GAT;2020;8;31242;PL;8;11:00;13:00:4;AED2
+BHM;2020;8;35122;TP;9;14:00;16:00:5;SO
+BHV;2020;9;34678;TP;10;16:00;18:00:4;LP2
+BGZ;2020;7;35662;TP;11;14:00;16:00:5;LPI;  {{Aqui foi criado com id diferente. No horário LPI está com a mesma sigla para terça e quinta, mas da maneira que está feito o nosso projeto não permite duas siglas de turma iguais}}
+BGP;2020;7;36512;PL;12;16:00;18:00:5;MUL2
+BHJ;2020;5;34212;PL;13;9:00;11:00:6;SO
+BHJ;2020;5;34678;TP;1;14:00;16:00:2;LP2;    {{erro: já existe a turma com este id, para além que depois iria dar mais erros}}
+BHF;2020;6;31242;PL;2;16:00;18:00:3;LP2;    {{erro: já existe uma aula com este id}}
+BLJ;2020;7;36431;TP;3;14:00;16:00:3;AED3;   {{erro: não existe uma Unidade Curricular com este id}}
+BJL;2020;8;31243;PL;20;16:00;18:00:2;AED2;  {{erro: não existe nenhum professor com este id}}

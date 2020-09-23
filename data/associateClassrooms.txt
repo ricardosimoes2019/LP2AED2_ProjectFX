@@ -1,0 +1,16 @@
+idClass;idClassroom
+1;109
+2;104
+3;106
+4;106
+5;105
+6;208
+7;109
+8;105
+9;104
+10;109
+11;109
+12;208
+13;105
+0;105;  {{erro: não existe uma aula com este id}}
+1;110;  {{erro: não existe uma sala com este id}}

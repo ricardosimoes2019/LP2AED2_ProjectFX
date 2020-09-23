@@ -1,0 +1,14 @@
+name;floor;about;x;y
+Entrada;1;Entrada do edificio;400;10;
+M.Café1;1;Máquina de Café;150;60;
+WC1M;1;WC Masculino;110;160;
+WC1F;1;WC Feminino;150;20;
+M.Café2;2;Máquina de Café;150;60;
+WC2M;2;WC Masculino;110;160;
+WC2F;2;WC Feminino;120;10;
+M.Café3;3;Máquina de Café;170;60;
+WC3M;3;WC Masculino;90;220
+WC3F;3;WC Feminino;140;220
+Escadas1;1;Escadas primeiro andar;60;80;
+Escadas2;2;Escadas segundo andar;60;80;
+Escadas3;3;Escadas terceiro andar;60;100;

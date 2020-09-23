@@ -1,0 +1,11 @@
+idnumber;idCourseClass;
+34678;LP2
+31242;LP2-AED2
+23545;HRDS
+35122;SO
+34212;SO
+36431;AED2
+36512;MUL2
+35662;LPI
+214312;LPI; {{erro: não existe um professor com este id}}
+34678;LP3;  {{erro: não existe nenhuma Unidade Curricular com este id}}

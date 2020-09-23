@@ -1,0 +1,53 @@
+Teachers Dump File:
+
+Removed at: 24/4/2020 18:22
+idnumber='36431', name='José Torres', address='Vila Real', birth=14/3/1972 0:0, email='jtorres@ufp.edu.pt', registration=10/8/2001 0:0
+Removed From UC:Algoritmos e Estruturas de Dados 2
+Removed From Class: BLJ
+
+Removed at: 24/4/2020 18:40
+idnumber='36431', name='José Torres', address='Vila Real', birth=14/3/1972 0:0, email='jtorres@ufp.edu.pt', registration=10/8/2001 0:0
+Removed From UC:Algoritmos e Estruturas de Dados 2
+Removed From Class: BLJ
+
+Removed at: 24/4/2020 18:41
+idnumber='36431', name='José Torres', address='Vila Real', birth=14/3/1972 0:0, email='jtorres@ufp.edu.pt', registration=10/8/2001 0:0
+Removed From UC:Algoritmos e Estruturas de Dados 2
+Removed From Class: BLJ
+
+Removed at: 24/4/2020 18:46
+idnumber='36431', name='José Torres', address='Vila Real', birth=14/3/1972 0:0, email='jtorres@ufp.edu.pt', registration=10/8/2001 0:0
+Removed From UC:Algoritmos e Estruturas de Dados 2
+Removed From Class: BLJ
+
+Removed at: 7/6/2020 0:18
+Ana Beatriz Gomes
+Removed From UC:Algoritmos e Estruturas de Dados 2
+Removed From UC:Linguagens de Programação 2
+Removed From Class: BHF
+Removed From Class: BIT
+Removed From Class: GAT
+Removed From Class: BHT
+
+Removed at: 7/6/2020 0:19
+Ana Beatriz Gomes
+Removed From UC:Algoritmos e Estruturas de Dados 2
+Removed From UC:Linguagens de Programação 2
+Removed From Class: BHF
+Removed From Class: BIT
+Removed From Class: GAT
+Removed From Class: BHT
+
+Removed at: 7/6/2020 0:20
+Ana Beatriz Gomes
+Removed From UC:Algoritmos e Estruturas de Dados 2
+Removed From UC:Linguagens de Programação 2
+Removed From Class: BHF
+Removed From Class: BIT
+Removed From Class: GAT
+Removed From Class: BHT
+
+Removed at: 10/6/2020 17:38
+José Manuel Torres
+Removed From UC:Algoritmos e Estruturas de Dados 2
+Removed From Class: BIV

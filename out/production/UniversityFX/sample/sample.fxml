@@ -1,0 +1,1370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="center" hgap="10" prefHeight="462.0" prefWidth="600.0" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="462.0" prefWidth="600.0">
+         <children>
+            <MenuBar prefHeight="468.0" prefWidth="600.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#getDatafromBinFiles" text="Carregar  Bin" />
+                        <MenuItem mnemonicParsing="false" onAction="#getDataFromTxtFiles" text="Carregar  TXT" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#saveAllDatatoBinFiles" text="Save Bin" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <TabPane layoutY="27.0" prefHeight="435.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Graph">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="386.0" prefWidth="600.0">
+                           <children>
+                              <Separator layoutX="173.0" prefHeight="183.0" prefWidth="427.0" />
+                              <Separator layoutX="-1.0" layoutY="88.0" orientation="VERTICAL" prefHeight="307.0" prefWidth="348.0" />
+                              <Group fx:id="graphGroup" layoutX="141.0" layoutY="71.0" AnchorPane.topAnchor="120.0" />
+                              <Button fx:id="firstFloor" layoutX="176.0" layoutY="30.0" mnemonicParsing="false" onAction="#handleFirstFloorButton" text="1º Andar" />
+                              <Button fx:id="secondFloor" layoutX="347.0" layoutY="30.0" mnemonicParsing="false" onAction="#handleSecondFloorButton" text="2º Andar" />
+                              <Button fx:id="thirdFloor" layoutX="501.0" layoutY="30.0" mnemonicParsing="false" onAction="#handleThirdFloorButton" text="3º Andar" />
+                              <Button fx:id="connectedButton" layoutX="22.0" layoutY="92.0" mnemonicParsing="false" onAction="#connectedDigraph" text="Conexo" />
+                              <Button fx:id="passageButton" layoutX="90.0" layoutY="92.0" mnemonicParsing="false" onAction="#handlePassageButton" prefHeight="27.0" prefWidth="75.0" text="Passagem" />
+                              <Button layoutX="21.0" layoutY="133.0" mnemonicParsing="false" onAction="#handleInsertNodee" prefHeight="27.0" prefWidth="62.0" text="Inserir" />
+                              <Button layoutX="91.0" layoutY="133.0" mnemonicParsing="false" onAction="#handleRemoveNodeButton" prefHeight="27.0" prefWidth="74.0" text="Remover" />
+                              <VBox layoutX="20.0" layoutY="168.0" prefHeight="169.0" prefWidth="152.0">
+                                 <children>
+                                    <HBox prefHeight="31.0" prefWidth="136.0">
+                                       <children>
+                                          <TextField fx:id="classroomAboutFieldSearch" prefHeight="27.0" prefWidth="63.0" promptText="Ponto">
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <Button mnemonicParsing="false" onAction="#handleAboutClassroom" prefHeight="27.0" prefWidth="70.0" text="Sobre" textAlignment="CENTER">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="25.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Procurar Caminho" textAlignment="CENTER" wrappingWidth="134.22900390625">
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                    <HBox prefHeight="37.0" prefWidth="136.0">
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                       <children>
+                                          <TextField fx:id="classroom1" alignment="TOP_CENTER" prefHeight="27.0" prefWidth="53.0" promptText="Sala 1">
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <TextField fx:id="classroom2" alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="27.0" prefWidth="53.0" promptText="Sala 2">
+                                             <HBox.margin>
+                                                <Insets left="30.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                    <Button mnemonicParsing="false" onAction="#handleGetBestWayButton" text="Ver Caminho" textAlignment="CENTER">
+                                       <VBox.margin>
+                                          <Insets left="25.0" top="5.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                              <TitledPane fx:id="aboutPane" animated="false" collapsible="false" layoutX="208.0" layoutY="80.0" prefHeight="259.0" prefWidth="205.0" text="About" textAlignment="CENTER" visible="false">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox layoutX="2.0" layoutY="-2.0" prefHeight="233.0" prefWidth="171.0">
+                                             <children>
+                                                <HBox prefHeight="37.0" prefWidth="171.0">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sala :" textAlignment="CENTER" wrappingWidth="43.22900390625">
+                                                         <HBox.margin>
+                                                            <Insets top="10.0" />
+                                                         </HBox.margin>
+                                                      </Text>
+                                                      <TextField fx:id="abouIdField" disable="true" prefHeight="16.0" prefWidth="120.0">
+                                                         <HBox.margin>
+                                                            <Insets top="5.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="10.0" prefHeight="39.0" prefWidth="171.0">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Andar" textAlignment="CENTER" wrappingWidth="59.22900390625">
+                                                         <HBox.margin>
+                                                            <Insets top="10.0" />
+                                                         </HBox.margin>
+                                                      </Text>
+                                                      <TextField fx:id="aboutFloorField" disable="true" prefHeight="29.0" prefWidth="104.0">
+                                                         <HBox.margin>
+                                                            <Insets top="5.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="42.0" prefHeight="40.0" prefWidth="171.0">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Espaço:" textAlignment="CENTER" wrappingWidth="59.22900390625">
+                                                         <HBox.margin>
+                                                            <Insets top="10.0" />
+                                                         </HBox.margin>
+                                                      </Text>
+                                                      <TextField fx:id="aboutSizeField" disable="true" prefHeight="29.0" prefWidth="104.0">
+                                                         <HBox.margin>
+                                                            <Insets top="5.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="74.0" prefHeight="37.0" prefWidth="171.0">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ocupada:" textAlignment="CENTER" wrappingWidth="68.22900390625">
+                                                         <HBox.margin>
+                                                            <Insets top="10.0" />
+                                                         </HBox.margin>
+                                                      </Text>
+                                                      <CheckBox fx:id="freeCheck" disable="true" mnemonicParsing="false">
+                                                         <HBox.margin>
+                                                            <Insets left="75.0" top="10.0" />
+                                                         </HBox.margin>
+                                                      </CheckBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="114.0" prefHeight="76.0" prefWidth="171.0">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sobre:" textAlignment="CENTER" wrappingWidth="59.22900390625">
+                                                         <HBox.margin>
+                                                            <Insets top="30.0" />
+                                                         </HBox.margin>
+                                                      </Text>
+                                                      <TextArea fx:id="aboutField" editable="false" prefHeight="76.0" prefWidth="103.0" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane fx:id="connectedPane" animated="false" collapsible="false" layoutX="183.0" layoutY="146.0" prefHeight="74.0" prefWidth="205.0" text="Conexo" textAlignment="CENTER" visible="false">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox layoutX="3.0" prefHeight="47.0" prefWidth="199.0">
+                                             <children>
+                                                <Button fx:id="firstFloorConnected" mnemonicParsing="false" onAction="#handleFirstFloorConnectedButton" prefHeight="22.0" prefWidth="34.0" text="1" textAlignment="CENTER">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <padding>
+                                                      <Insets bottom="5.0" />
+                                                   </padding>
+                                                   <HBox.margin>
+                                                      <Insets left="7.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                                <Button fx:id="secondFloorConnected" mnemonicParsing="false" onAction="#handleSecondFloorConnectedButton" prefHeight="22.0" prefWidth="34.0" text="2" textAlignment="CENTER">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <padding>
+                                                      <Insets bottom="5.0" />
+                                                   </padding>
+                                                   <HBox.margin>
+                                                      <Insets left="7.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                                <Button fx:id="thirdFloorConnected" mnemonicParsing="false" onAction="#handleThirdFloorConnected" prefHeight="22.0" prefWidth="34.0" text="3" textAlignment="CENTER">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <padding>
+                                                      <Insets bottom="5.0" />
+                                                   </padding>
+                                                   <HBox.margin>
+                                                      <Insets left="7.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                                <Button fx:id="AllFloorConnected" mnemonicParsing="false" onAction="#handleAllFloorsConnected" prefHeight="22.0" prefWidth="61.0" text="Todos" textAlignment="CENTER">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <padding>
+                                                      <Insets bottom="5.0" />
+                                                   </padding>
+                                                   <HBox.margin>
+                                                      <Insets left="7.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                             </children>
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                             <padding>
+                                                <Insets top="10.0" />
+                                             </padding>
+                                          </HBox>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </TitledPane>
+                              <TitledPane fx:id="pathPane" animated="false" collapsible="false" layoutX="208.0" layoutY="117.0" prefHeight="202.0" prefWidth="359.0" textAlignment="CENTER" visible="false">
+                                 <content>
+                                    <AnchorPane fx:id="pathPopup" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox layoutX="7.0" prefHeight="175.0" prefWidth="359.0">
+                                             <children>
+                                                <HBox layoutX="10.0" layoutY="114.0" prefHeight="164.0" prefWidth="359.0">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Caminho" textAlignment="CENTER" wrappingWidth="59.22900390625">
+                                                         <HBox.margin>
+                                                            <Insets top="30.0" />
+                                                         </HBox.margin>
+                                                      </Text>
+                                                      <TextArea fx:id="pathField" editable="false" prefHeight="107.0" prefWidth="270.0" />
+                                                   </children>
+                                                   <padding>
+                                                      <Insets top="30.0" />
+                                                   </padding>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane fx:id="passagePane" animated="false" collapsible="false" layoutX="22.0" layoutY="92.0" prefHeight="218.0" prefWidth="360.0" text="Passagens" textAlignment="CENTER" visible="false">
+                                 <content>
+                                    <AnchorPane fx:id="passagePopup" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox layoutX="6.0" prefHeight="191.0" prefWidth="360.0">
+                                             <children>
+                                                <HBox layoutX="10.0" layoutY="114.0" prefHeight="112.0" prefWidth="340.0">
+                                                   <children>
+                                                      <TextArea fx:id="passageField" prefHeight="107.0" prefWidth="347.0" promptText="Coloque a passagem que deseja Habilitar/Desabilitar coloque 1 passagem por linha separada por &quot;;&quot; Se a passagem a habilitar ainda não existir, coloque separado por  &quot;;&quot; a sua distancia e o tempo" />
+                                                   </children>
+                                                   <padding>
+                                                      <Insets top="5.0" />
+                                                   </padding>
+                                                </HBox>
+                                                <Text fill="#6b6565" strokeType="OUTSIDE" strokeWidth="0.0" text="Nota: Se quiser Habilitar/Desabilitar nos 2 sentidos deve colocar a ordem dos mesmos em 2 linhas diferentes. Separe o inicio e fim da passagem através de &quot;;&quot; Possibilidade de alteração de passagem de tempo e distancia" wrappingWidth="350.22900390625">
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                </Text>
+                                                <HBox prefHeight="37.0" prefWidth="360.0">
+                                                   <children>
+                                                      <Button fx:id="enableButton" mnemonicParsing="false" onAction="#handleEnablePassage" prefHeight="27.0" prefWidth="107.0" text="Habilitar" textAlignment="CENTER">
+                                                         <HBox.margin>
+                                                            <Insets left="5.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="closePassageButton" mnemonicParsing="false" onAction="#handleClosePassagePopUp" text="X">
+                                                         <HBox.margin>
+                                                            <Insets left="45.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="disableButton" mnemonicParsing="false" onAction="#handledisablePassage" prefHeight="27.0" prefWidth="107.0" text="Desabilitar" textAlignment="CENTER">
+                                                         <HBox.margin>
+                                                            <Insets left="50.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets top="20.0" />
+                                                   </padding>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane fx:id="nodeInsertPane" animated="false" collapsible="false" layoutX="263.0" layoutY="130.0" prefHeight="72.0" prefWidth="206.0" text="Inserir" textAlignment="CENTER" visible="false">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox layoutX="3.0" prefHeight="47.0" prefWidth="199.0">
+                                             <children>
+                                                <Button fx:id="classroomInsertButton" mnemonicParsing="false" onAction="#handleClassroomInsertButton" prefHeight="22.0" prefWidth="54.0" text="Sala" textAlignment="CENTER">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <padding>
+                                                      <Insets bottom="5.0" />
+                                                   </padding>
+                                                   <HBox.margin>
+                                                      <Insets left="7.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                                <Button fx:id="crossingPointInsertButton" mnemonicParsing="false" onAction="#handleCPInsert" prefHeight="22.0" prefWidth="121.0" text="Ponto de Passagem" textAlignment="CENTER">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <padding>
+                                                      <Insets bottom="5.0" />
+                                                   </padding>
+                                                   <HBox.margin>
+                                                      <Insets left="7.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                             </children>
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                             <padding>
+                                                <Insets top="10.0" />
+                                             </padding>
+                                          </HBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane fx:id="crossingPInsertPane" animated="false" collapsible="false" layoutX="208.0" layoutY="118.0" prefHeight="228.0" prefWidth="360.0" text="Inserção novo ponto de passagem" textAlignment="CENTER" visible="false">
+                                 <content>
+                                    <AnchorPane fx:id="pathPopup11" minHeight="0.0" minWidth="0.0" prefHeight="185.0" prefWidth="358.0">
+                                       <children>
+                                          <VBox layoutX="2.0" prefHeight="175.0" prefWidth="354.0">
+                                             <children>
+                                                <HBox prefHeight="47.0" prefWidth="335.0">
+                                                   <children>
+                                                      <TextField fx:id="crossingPNameField" prefHeight="27.0" prefWidth="73.0" promptText="Nome">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" top="10.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                      <TextField fx:id="crossingPAboutField" prefHeight="27.0" prefWidth="255.0" promptText="Sobre">
+                                                         <HBox.margin>
+                                                            <Insets left="5.0" top="10.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="47.0" prefWidth="335.0">
+                                                   <children>
+                                                      <TextField fx:id="crossingPXField" prefHeight="27.0" prefWidth="32.0" promptText="x">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" top="10.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                      <TextField fx:id="crossingPYField" layoutX="20.0" layoutY="20.0" prefHeight="27.0" prefWidth="31.0" promptText="y">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" top="10.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                      <TextField fx:id="crossingPFloorField" prefHeight="27.0" prefWidth="75.0" promptText="Andar">
+                                                         <HBox.margin>
+                                                            <Insets left="5.0" top="10.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="114.0" prefHeight="106.0" prefWidth="357.0">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ligações" textAlignment="CENTER" wrappingWidth="59.22900390625">
+                                                         <HBox.margin>
+                                                            <Insets top="30.0" />
+                                                         </HBox.margin>
+                                                      </Text>
+                                                      <TextArea fx:id="crossingPConnectedField" prefHeight="58.0" prefWidth="270.0" promptText="Uma ligação por linha divida os parametros por &quot;;&quot;">
+                                                         <padding>
+                                                            <Insets bottom="10.0" />
+                                                         </padding>
+                                                      </TextArea>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets top="30.0" />
+                                                   </padding>
+                                                </HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Button fx:id="closeCrossingPInsertButton1" mnemonicParsing="false" onAction="#handleCreateCrossingP" prefHeight="27.0" prefWidth="107.0" text="Inserir" textAlignment="CENTER">
+                                                         <HBox.margin>
+                                                            <Insets left="100.0" top="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button mnemonicParsing="false" onAction="#handleCloseClassroomInsertPane" prefHeight="31.0" prefWidth="62.0" text="Fechar">
+                                                         <opaqueInsets>
+                                                            <Insets />
+                                                         </opaqueInsets>
+                                                         <padding>
+                                                            <Insets bottom="5.0" />
+                                                         </padding>
+                                                         <HBox.margin>
+                                                            <Insets left="60.0" top="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane fx:id="classroomInsertPane" animated="false" collapsible="false" layoutX="217.0" layoutY="127.0" prefHeight="228.0" prefWidth="360.0" text="Inserção nova sala" textAlignment="CENTER" visible="false">
+                                 <content>
+                                    <AnchorPane fx:id="pathPopup1" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox prefHeight="175.0" prefWidth="354.0">
+                                             <children>
+                                                <HBox prefHeight="47.0" prefWidth="335.0">
+                                                   <children>
+                                                      <TextField fx:id="classroomNameField" prefHeight="27.0" prefWidth="73.0" promptText="Nome">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" top="10.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                      <TextField fx:id="aboutClassroomField" prefHeight="27.0" prefWidth="255.0" promptText="Sobre">
+                                                         <HBox.margin>
+                                                            <Insets left="5.0" top="10.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="47.0" prefWidth="335.0">
+                                                   <children>
+                                                      <TextField fx:id="classroomXField" prefHeight="27.0" prefWidth="32.0" promptText="x">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" top="10.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                      <TextField fx:id="classroomYField" layoutX="20.0" layoutY="20.0" prefHeight="27.0" prefWidth="31.0" promptText="y">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" top="10.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                      <TextField fx:id="classroomFloorField" prefHeight="27.0" prefWidth="75.0" promptText="Andar">
+                                                         <HBox.margin>
+                                                            <Insets left="5.0" top="10.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                      <TextField fx:id="classroomLimitStudentsPane" prefHeight="27.0" prefWidth="170.0" promptText="Limite">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" top="10.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="114.0" prefHeight="80.0" prefWidth="359.0">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ligações" textAlignment="CENTER" wrappingWidth="59.22900390625">
+                                                         <HBox.margin>
+                                                            <Insets top="30.0" />
+                                                         </HBox.margin>
+                                                      </Text>
+                                                      <TextArea fx:id="classroomConnectedTextAreaField" prefHeight="44.0" prefWidth="270.0" promptText="Uma ligação por linha divida os parametros por &quot;;&quot;">
+                                                         <padding>
+                                                            <Insets bottom="10.0" />
+                                                         </padding>
+                                                      </TextArea>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets top="30.0" />
+                                                   </padding>
+                                                </HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Button fx:id="closeClassroomInsertButton" mnemonicParsing="false" onAction="#handleCreateClassroom" prefHeight="27.0" prefWidth="107.0" text="Inserir" textAlignment="CENTER">
+                                                         <HBox.margin>
+                                                            <Insets left="100.0" top="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button mnemonicParsing="false" onAction="#handleCloseClassroomInsertPane" prefHeight="31.0" prefWidth="62.0" text="Fechar">
+                                                         <opaqueInsets>
+                                                            <Insets />
+                                                         </opaqueInsets>
+                                                         <padding>
+                                                            <Insets bottom="5.0" />
+                                                         </padding>
+                                                         <HBox.margin>
+                                                            <Insets left="60.0" top="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane fx:id="nodeRemovePane" animated="false" collapsible="false" layoutX="279.0" layoutY="140.0" prefHeight="107.0" prefWidth="206.0" text="Remover" textAlignment="CENTER" visible="false">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TextField fx:id="noderemovefield" layoutX="22.0" layoutY="14.0" promptText="Insira um ponto existente" />
+                                          <Button layoutX="139.0" layoutY="54.0" mnemonicParsing="false" onAction="#handleCloseNodeRemovePane" prefHeight="22.0" prefWidth="44.0" text="Fechar">
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                             <padding>
+                                                <Insets bottom="5.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button layoutX="22.0" layoutY="54.0" mnemonicParsing="false" onAction="#handleRemoveNodeSubmit" prefHeight="22.0" prefWidth="59.0" text="Remover">
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                             <padding>
+                                                <Insets bottom="5.0" />
+                                             </padding>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <Line endX="80.0" layoutX="142.0" layoutY="388.0" startX="39.0" stroke="#001aff" />
+                              <Line endX="12.20709228515625" endY="-18.79290771484375" layoutX="211.0" layoutY="407.0" startX="2.0" startY="-12.0" stroke="#001aff" />
+                              <Line endX="2.5" endY="-29.5" layoutX="220.0" layoutY="417.0" startX="-10.0" startY="-36.5" stroke="#001aff" />
+                              <Line endX="28.5" endY="-50.0" layoutX="152.0" layoutY="398.0" startX="28.5" startY="-9.5" stroke="#001aff" />
+                              <Line endX="-48.0" endY="-59.0" layoutX="221.0" layoutY="417.0" startX="-41.0" startY="-69.5" stroke="#001aff" />
+                              <Line endX="-90.0" endY="12.0" layoutX="279.0" layoutY="347.0" startX="-100.0" stroke="#001aff" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab onSelectionChanged="#showClassroomsTable" text="Salas">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <HBox layoutX="96.0" prefHeight="402.0" prefWidth="504.0">
+                                 <children>
+                                    <VBox prefHeight="317.0" prefWidth="494.0">
+                                       <children>
+                                          <TableView fx:id="classroomTable" prefHeight="396.0" prefWidth="494.0">
+                                            <columns>
+                                              <TableColumn fx:id="nameCol" prefWidth="109.0" text="Nome" />
+                                              <TableColumn fx:id="floorCol" prefWidth="91.0" text="Piso" />
+                                                <TableColumn fx:id="studentsLimitCol" prefWidth="137.0" text="Limite " />
+                                                <TableColumn fx:id="aboutCol" prefWidth="154.0" text="Sobre" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <VBox prefHeight="324.0" prefWidth="100.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#handleClassroomStatusPane" prefHeight="50.0" prefWidth="74.0" text="Estado">
+                                       <VBox.margin>
+                                          <Insets left="10.0" top="30.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Button layoutX="20.0" layoutY="40.0" mnemonicParsing="false" onAction="#handleClassroomBySizePane" prefHeight="50.0" prefWidth="74.0" text="Tamanho">
+                                       <VBox.margin>
+                                          <Insets left="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Button layoutX="20.0" layoutY="77.0" mnemonicParsing="false" onAction="#handleLessonsByClassroomSearch" prefHeight="50.0" prefWidth="74.0" text="Aulas">
+                                       <VBox.margin>
+                                          <Insets left="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                              <TitledPane fx:id="classroomStatePane" animated="false" collapsible="false" layoutX="100.0" layoutY="55.0" prefHeight="107.0" prefWidth="189.0" textAlignment="CENTER" visible="false">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="178.0" prefWidth="380.0">
+                                       <children>
+                                          <Button layoutX="14.0" layoutY="26.0" mnemonicParsing="false" onAction="#handleSearchClassroomNow" prefHeight="27.0" prefWidth="59.0" text="Agora" />
+                                          <Button layoutX="94.0" layoutY="26.0" mnemonicParsing="false" onAction="#handleSearchClassroomBetween" prefHeight="27.0" prefWidth="59.0" text="Entre" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane fx:id="classroomNowPane" animated="false" collapsible="false" layoutX="149.0" layoutY="72.0" prefHeight="243.0" prefWidth="406.0" text="Agora" textAlignment="CENTER" visible="false">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="90.0" prefWidth="196.0">
+                                       <children>
+                                          <TableView fx:id="nowClassroomTable" prefHeight="173.0" prefWidth="405.0">
+                                            <columns>
+                                              <TableColumn fx:id="nowNameCol" prefWidth="66.0" text="Nome" />
+                                              <TableColumn fx:id="nowFloorCol" prefWidth="74.0" text="Piso" />
+                                                <TableColumn fx:id="nowLimitCol" prefWidth="78.0" text="Limite" />
+                                                <TableColumn fx:id="nowAboutCol" prefWidth="186.0" text="Sobre" />
+                                            </columns>
+                                          </TableView>
+                                          <TextField fx:id="classroomNowSearch" layoutX="8.0" layoutY="180.0" prefHeight="27.0" prefWidth="56.0" promptText="Sala" />
+                                          <Button layoutX="74.0" layoutY="180.0" mnemonicParsing="false" onAction="#handleShowClassroomClassNow" text="Ver Aula" />
+                                          <TextField fx:id="showClassAtMoment" disable="true" editable="false" layoutX="153.0" layoutY="180.0" visible="false" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane fx:id="classroomBetweenPane" animated="false" collapsible="false" layoutX="141.0" layoutY="63.0" prefHeight="243.0" prefWidth="406.0" text="Entre" textAlignment="CENTER" visible="false">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="90.0" prefWidth="196.0">
+                                       <children>
+                                          <TableView fx:id="betweenClassroomTable" prefHeight="173.0" prefWidth="405.0">
+                                             <columns>
+                                                <TableColumn fx:id="betweenNameCol" prefWidth="66.0" text="Nome" />
+                                                <TableColumn fx:id="betweenFloorCol" prefWidth="74.0" text="Piso" />
+                                                <TableColumn fx:id="betweenLimitCol" prefWidth="78.0" text="Limite" />
+                                                <TableColumn fx:id="betweenAboutCol" prefWidth="186.0" text="Sobre" />
+                                             </columns>
+                                          </TableView>
+                                          <TextField fx:id="classroombetweenSearch" layoutX="8.0" layoutY="180.0" prefHeight="27.0" prefWidth="56.0" promptText="Sala" />
+                                          <Button layoutX="74.0" layoutY="180.0" mnemonicParsing="false" onAction="#handleShowClassroomClassBetween" text="Ver Aulas" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane fx:id="classroomLessonsBetweenPane" animated="false" collapsible="false" layoutX="110.0" layoutY="65.0" prefHeight="230.0" prefWidth="276.0" text="Salas Livres entre" textAlignment="CENTER" visible="false">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="202.0" prefWidth="340.0">
+                                       <children>
+                                          <TableView fx:id="lessonsBetweenTable" prefHeight="158.0" prefWidth="275.0">
+                                            <columns>
+                                              <TableColumn fx:id="idLessonsBetweenCol" prefWidth="75.0" text="ID" />
+                                              <TableColumn fx:id="startHLessonsBetweenCol" prefWidth="119.0" text="Inicio" />
+                                                <TableColumn fx:id="endHLessonsBetweenCol1" prefWidth="79.0" text="Fim" />
+                                            </columns>
+                                          </TableView>
+                                          <Button layoutX="204.0" layoutY="167.0" mnemonicParsing="false" onAction="#handleSearchClassroomClose" prefHeight="27.0" prefWidth="59.0" text="Fechar" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane fx:id="classroombetweenSearchpane" animated="false" collapsible="false" layoutX="110.0" layoutY="65.0" prefHeight="147.0" prefWidth="210.0" textAlignment="CENTER" visible="false">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="178.0" prefWidth="380.0">
+                                       <children>
+                                          <Button layoutX="162.0" layoutY="78.0" mnemonicParsing="false" onAction="#handleShowClassroomClassBetween" prefHeight="26.0" prefWidth="32.0" text="ok" />
+                                          <TextField fx:id="startHourClassroomSearch" layoutX="14.0" layoutY="33.0" prefHeight="27.0" prefWidth="50.0" promptText="Inicio" />
+                                          <TextField fx:id="endHourClassroomSearch1" layoutX="79.0" layoutY="33.0" prefHeight="27.0" prefWidth="50.0" promptText="Fim" />
+                                          <TextField fx:id="dayClassroomSearch" layoutX="144.0" layoutY="33.0" prefHeight="27.0" prefWidth="50.0" promptText="Dia" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane fx:id="classroomBySizePane" animated="false" collapsible="false" layoutX="110.0" layoutY="65.0" prefHeight="82.0" prefWidth="141.0" text="Salas Por Tamanho" textAlignment="CENTER" visible="false">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="56.0" prefWidth="140.0">
+                                       <children>
+                                          <Button layoutX="93.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleShowClassroomBySize" prefHeight="13.0" prefWidth="37.0" text="OK" />
+                                          <TextField fx:id="bysizeClassroomField" layoutX="13.0" layoutY="14.0" prefHeight="27.0" prefWidth="70.0" promptText="Tamanho" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane fx:id="classroomBySizeTabPane" animated="false" collapsible="false" layoutX="151.0" layoutY="73.0" prefHeight="243.0" prefWidth="406.0" text="Por Tamanho" textAlignment="CENTER" visible="false">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="90.0" prefWidth="196.0">
+                                       <children>
+                                          <TableView fx:id="bySizeClassroomTable" prefHeight="173.0" prefWidth="405.0">
+                                             <columns>
+                                                <TableColumn fx:id="bySizeNameCol" prefWidth="66.0" text="Nome" />
+                                                <TableColumn fx:id="bySizeFloorCol" prefWidth="74.0" text="Piso" />
+                                                <TableColumn fx:id="bySizeLimitCol" prefWidth="78.0" text="Limite" />
+                                                <TableColumn fx:id="bySizeAboutCol" prefWidth="186.0" text="Sobre" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane fx:id="lessonsByClassroomSearchPane" animated="false" collapsible="false" layoutX="120.0" layoutY="75.0" prefHeight="139.0" prefWidth="284.0" text="Escolher Sala" textAlignment="CENTER" visible="false">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="108.0" prefWidth="285.0">
+                                       <children>
+                                          <Button layoutX="208.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleShowLessonsByClassroom" prefHeight="27.0" prefWidth="60.0" text="Todas" />
+                                          <TextField fx:id="lessonsByClassroomField" layoutX="13.0" layoutY="14.0" prefHeight="27.0" prefWidth="70.0" promptText="Sala" />
+                                          <TextField fx:id="lessonsStartHourSearchField" layoutX="13.0" layoutY="54.0" prefHeight="27.0" prefWidth="49.0" promptText="Inicio" />
+                                          <TextField fx:id="lessonsEndHourSearchField" layoutX="68.0" layoutY="54.0" prefHeight="27.0" prefWidth="49.0" promptText="Fim" />
+                                          <TextField fx:id="lessonsDaySearchField" layoutX="125.0" layoutY="54.0" prefHeight="27.0" prefWidth="35.0" promptText="Dia" />
+                                          <Button layoutX="208.0" layoutY="54.0" mnemonicParsing="false" onAction="#handleShowLessonsByInterval" prefHeight="27.0" prefWidth="60.0" text="OK" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane fx:id="lessonsPane" animated="false" collapsible="false" layoutX="220.0" layoutY="102.0" prefHeight="203.0" prefWidth="325.0" text="Aulas" textAlignment="CENTER" visible="false">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="90.0" prefWidth="196.0">
+                                       <children>
+                                          <TableView fx:id="lessonsTable" prefHeight="173.0" prefWidth="323.0">
+                                             <columns>
+                                                <TableColumn fx:id="idLessonCol" prefWidth="66.0" text="Nome" />
+                                                <TableColumn fx:id="startHLessonCol" prefWidth="74.0" text="Inicio" />
+                                                <TableColumn fx:id="endHLessonCol" prefWidth="78.0" text="Fim" />
+                                                <TableColumn fx:id="dayLessonCol" prefWidth="104.0" text="Dia" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab onSelectionChanged="#handleShowLessonsTable" text="Aulas">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox prefHeight="367.0" prefWidth="100.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#handleInsertLesson" prefHeight="47.0" prefWidth="74.0" text="Inserir &#10;Aula" textAlignment="CENTER">
+                                       <VBox.margin>
+                                          <Insets left="10.0" top="30.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#handleRemoveLessonButton" prefHeight="47.0" prefWidth="74.0" text="Remover &#10;Aula" textAlignment="CENTER">
+                                       <VBox.margin>
+                                          <Insets left="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#handleChangeLessonClassroom" prefHeight="57.0" prefWidth="74.0" text="Alterar&#10;Sala" textAlignment="CENTER">
+                                       <VBox.margin>
+                                          <Insets left="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Button layoutX="20.0" layoutY="40.0" mnemonicParsing="false" onAction="#handleChangeLessonSchedule" prefHeight="47.0" prefWidth="74.0" text="Alterar&#10;Horario" textAlignment="CENTER">
+                                       <VBox.margin>
+                                          <Insets left="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                              <TableView fx:id="allLessonsTable" layoutX="98.0" prefHeight="398.0" prefWidth="501.0">
+                                <columns>
+                                  <TableColumn fx:id="idLessonsCol" prefWidth="48.0" text="iD" />
+                                  <TableColumn fx:id="starthourLessonsCol" prefWidth="49.0" text="Inicio" />
+                                    <TableColumn fx:id="endhourLessonsCol" prefWidth="53.0" text="Fim" />
+                                    <TableColumn fx:id="dayLessonsCol" prefWidth="86.0" text="Dia" />
+                                    <TableColumn fx:id="classroomLessonsCol" prefWidth="127.0" text="Sala" />
+                                    <TableColumn fx:id="aClassLessonsCol" prefWidth="137.0" text="Turma" />
+                                </columns>
+                              </TableView>
+                              <TitledPane fx:id="insertLessonPane" animated="false" collapsible="false" layoutX="102.0" layoutY="93.0" prefHeight="181.0" prefWidth="397.0" text="Inserir Aula" textAlignment="CENTER" visible="false">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="173.0" prefWidth="359.0">
+                                       <children>
+                                          <HBox prefHeight="46.0" prefWidth="398.0">
+                                             <children>
+                                                <ComboBox fx:id="classroomComboBox" layoutX="15.0" layoutY="20.0" prefHeight="27.0" prefWidth="76.0" promptText="Sala">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="10.0" />
+                                                   </HBox.margin>
+                                                </ComboBox>
+                                                <ComboBox fx:id="uCurricComboBox" layoutX="236.0" layoutY="10.0" onAction="#handleDragToShowTeachersByUcs" prefHeight="27.0" prefWidth="76.0" promptText="Disp">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="10.0" />
+                                                   </HBox.margin>
+                                                </ComboBox>
+                                                <ComboBox fx:id="startHourComboBox" prefHeight="27.0" prefWidth="76.0" promptText="Inicio">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="10.0" />
+                                                   </HBox.margin>
+                                                </ComboBox>
+                                                <ComboBox fx:id="endHourComboBox1" layoutX="133.0" layoutY="20.0" prefHeight="27.0" prefWidth="67.0" promptText="Fim">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="10.0" />
+                                                   </HBox.margin>
+                                                </ComboBox>
+                                                <ComboBox fx:id="dayComboBox" layoutX="214.0" layoutY="20.0" prefHeight="27.0" prefWidth="68.0" promptText="Dia">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="10.0" />
+                                                   </HBox.margin>
+                                                </ComboBox>
+                                             </children>
+                                          </HBox>
+                                          <Text fill="#000000a3" layoutX="10.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nota: tenha em atenção para não colocar uma sala ocupada." wrappingWidth="330.22900390625">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Text>
+                                          <Button layoutX="149.0" layoutY="118.0" mnemonicParsing="false" onAction="#handleInsertLessonButton" text="Inserir" />
+                                          <HBox layoutY="46.0" prefHeight="36.0" prefWidth="390.0">
+                                             <children>
+                                                <TextField fx:id="aClassNameField" prefHeight="27.0" prefWidth="75.0" promptText="Turma">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <TextField fx:id="aClassSizeField" prefHeight="27.0" prefWidth="78.0" promptText="Tamanho">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <TextField fx:id="aClassTypeField" prefHeight="27.0" prefWidth="85.0" promptText="Tipo (PL/TP)">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <ComboBox fx:id="teacherComboBox" disable="true" prefHeight="27.0" prefWidth="98.0" promptText="Professor">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" />
+                                                   </HBox.margin>
+                                                </ComboBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane fx:id="deleteLessonPane" animated="false" collapsible="false" layoutY="152.0" prefHeight="124.0" prefWidth="98.0" text="Remover" textAlignment="CENTER" visible="false">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="119.0" prefWidth="96.0">
+                                       <children>
+                                          <Button layoutX="2.0" layoutY="61.0" mnemonicParsing="false" onAction="#handleRemoveLesson" prefHeight="27.0" prefWidth="83.0" text="Remover" />
+                                          <ComboBox fx:id="allLessonsComboBox" layoutX="5.0" layoutY="14.0" prefHeight="27.0" prefWidth="80.0" promptText="Aula" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane fx:id="changeClassroomLessonPane" animated="false" collapsible="false" layoutY="207.0" prefHeight="162.0" prefWidth="99.0" text="Alterar" textAlignment="CENTER" visible="false">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="119.0" prefWidth="96.0">
+                                       <children>
+                                          <Button layoutX="7.0" layoutY="93.0" mnemonicParsing="false" onAction="#handleChangeLessonClassroomSubmit" prefHeight="27.0" prefWidth="83.0" text="Alterar" />
+                                          <ComboBox fx:id="allLessonsComboBox1" layoutX="9.0" layoutY="14.0" prefHeight="27.0" prefWidth="80.0" promptText="Aula" />
+                                          <ComboBox fx:id="classroomLessonComboBox" layoutX="8.0" layoutY="54.0" prefHeight="27.0" prefWidth="80.0" promptText="Sala" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane fx:id="changeScheduleLessonPane" animated="false" collapsible="false" layoutX="100.0" layoutY="207.0" prefHeight="159.0" prefWidth="201.0" text="Alterar Horario" textAlignment="CENTER" visible="false">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="119.0" prefWidth="96.0">
+                                       <children>
+                                          <Button layoutX="48.0" layoutY="90.0" mnemonicParsing="false" onAction="#handleChangeLessonScheduleSubmit" prefHeight="27.0" prefWidth="83.0" text="Alterar" />
+                                          <ComboBox fx:id="allLessonsComboBoxScheduleEdit" layoutX="9.0" layoutY="14.0" prefHeight="27.0" prefWidth="80.0" promptText="Aula" />
+                                          <ComboBox fx:id="editStartHourComboBox" layoutX="8.0" layoutY="54.0" prefHeight="27.0" prefWidth="80.0" promptText="Inicio" />
+                                          <ComboBox fx:id="editEndHourComboBox" layoutX="100.0" layoutY="14.0" prefHeight="27.0" prefWidth="80.0" promptText="Fim" />
+                                          <ComboBox fx:id="editDayComboBox" layoutX="100.0" layoutY="52.0" prefHeight="27.0" prefWidth="80.0" promptText="Dia" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab onSelectionChanged="#handleShowaClassTable" text="Turmas">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox layoutX="1.0" prefHeight="368.0" prefWidth="97.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#handleChangeClassSizeButton" text="Alterar&#10;Tamanho" textAlignment="CENTER">
+                                       <VBox.margin>
+                                          <Insets left="10.0" top="40.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Button layoutX="20.0" layoutY="50.0" mnemonicParsing="false" onAction="#handleChangeClassTeacherButton" text="Alterar&#10;Professor" textAlignment="CENTER">
+                                       <VBox.margin>
+                                          <Insets left="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Button layoutX="20.0" layoutY="158.0" mnemonicParsing="false" onAction="#handleAddClassLessonButton" prefHeight="44.0" prefWidth="71.0" text="Adicionar&#10;Aula" textAlignment="CENTER">
+                                       <VBox.margin>
+                                          <Insets left="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Button layoutX="20.0" layoutY="104.0" mnemonicParsing="false" onAction="#handleRemoveClassLessonButton" prefHeight="44.0" prefWidth="71.0" text="Remover&#10;Aula&#10;" textAlignment="CENTER">
+                                       <VBox.margin>
+                                          <Insets left="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Button layoutX="20.0" layoutY="212.0" mnemonicParsing="false" onAction="#handleShowaClassStudentsButton" prefHeight="44.0" prefWidth="71.0" text="Ver&#10;Alunos" textAlignment="CENTER">
+                                       <VBox.margin>
+                                          <Insets left="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Button layoutX="20.0" layoutY="266.0" mnemonicParsing="false" onAction="#handleAssociateStudentaClassButton" prefHeight="44.0" prefWidth="71.0" text="Associar&#10;Aluno" textAlignment="CENTER">
+                                       <VBox.margin>
+                                          <Insets left="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                              <TableView fx:id="aClassTable" layoutX="97.0" prefHeight="400.0" prefWidth="503.0">
+                                <columns>
+                                  <TableColumn fx:id="idaClassCol" prefWidth="75.0" text="iD" />
+                                  <TableColumn fx:id="yearaClassCol" prefWidth="75.0" text="Ano" />
+                                    <TableColumn fx:id="studentLimitaClassCol" prefWidth="75.0" text="Limite&#10;Estudantes" />
+                                    <TableColumn fx:id="typeaClassCol" prefWidth="75.0" text="Tipo" />
+                                    <TableColumn fx:id="teacheraClassCol" prefWidth="75.0" text="Professor" />
+                                    <TableColumn fx:id="ucurraClassCol" prefWidth="66.0" text="U.C" />
+                                    <TableColumn fx:id="lessonaClassCol" prefWidth="61.0" text="Aula" />
+                                </columns>
+                              </TableView>
+                              <TitledPane fx:id="changeClassPane" animated="false" collapsible="false" layoutX="138.0" layoutY="79.0" prefHeight="138.0" prefWidth="250.0" text="Alterar" textAlignment="CENTER" visible="false">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="119.0" prefWidth="96.0">
+                                       <children>
+                                          <Button layoutX="144.0" layoutY="59.0" mnemonicParsing="false" onAction="#handleChangeClassSubmit" prefHeight="27.0" prefWidth="83.0" text="Alterar" />
+                                          <ComboBox fx:id="allClassComboBox" layoutX="9.0" layoutY="14.0" onAction="#handleShowTeacherComboBox" prefHeight="27.0" prefWidth="94.0" promptText="Turma" />
+                                          <TextField fx:id="sizeChangeClassField" layoutX="145.0" layoutY="14.0" prefHeight="27.0" prefWidth="81.0" promptText="Tamanho" visible="false" />
+                                          <ComboBox fx:id="teacherChangeClassComboBox" layoutX="9.0" layoutY="59.0" prefHeight="27.0" prefWidth="103.0" promptText="Professor" visible="false" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane fx:id="addLessontoClassPane" animated="false" collapsible="false" layoutX="119.0" layoutY="89.0" prefHeight="138.0" prefWidth="462.0" text="Adicionar Aula" textAlignment="CENTER" visible="false">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="119.0" prefWidth="96.0">
+                                       <children>
+                                          <Button layoutX="189.0" layoutY="73.0" mnemonicParsing="false" onAction="#handleAddLessontoClassSubmit" prefHeight="27.0" prefWidth="83.0" text="Inserir" />
+                                          <ComboBox fx:id="startHouraddLessonComboBox" layoutX="9.0" layoutY="14.0" onAction="#handleShowTeacherComboBox" prefHeight="27.0" prefWidth="80.0" promptText="Inicio" />
+                                          <TextField fx:id="sizeChangeClassField1" layoutX="145.0" layoutY="14.0" prefHeight="27.0" prefWidth="81.0" promptText="Tamanho" visible="false" />
+                                          <ComboBox fx:id="endHouraddLessonComboBox" layoutX="97.0" layoutY="14.0" onAction="#handleShowTeacherComboBox" prefHeight="27.0" prefWidth="80.0" promptText="Fim" />
+                                          <ComboBox fx:id="dayAddLessonComboBox" layoutX="190.0" layoutY="14.0" onAction="#handleGetallClassroomsFree" prefHeight="27.0" prefWidth="80.0" promptText="Dia" />
+                                          <ComboBox fx:id="classroomsAddLessonComboBox" layoutX="279.0" layoutY="14.0" prefHeight="27.0" prefWidth="75.0" promptText="Sala" />
+                                          <ComboBox fx:id="allaClasswithoutLessonComboBox" layoutX="363.0" layoutY="14.0" onAction="#handleShowTeacherComboBox" prefHeight="27.0" prefWidth="83.0" promptText="Turma" />
+                                          <Text fill="#8a8383" layoutX="279.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(  Opcional)" wrappingWidth="74.22900390625" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane fx:id="aClassStudentsPane" animated="false" collapsible="false" layoutX="284.0" layoutY="133.0" prefHeight="223.0" prefWidth="278.0" text="Alunos de uma Turma" textAlignment="CENTER" visible="false">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="119.0" prefWidth="96.0">
+                                       <children>
+                                          <ComboBox fx:id="allaClassStudentsComboBox" layoutX="9.0" layoutY="14.0" onAction="#handleShowaClassStudents" prefHeight="27.0" prefWidth="259.0" promptText="Turmas" />
+                                          <TableView fx:id="aClassStudentsTable" layoutY="45.0" prefHeight="154.0" prefWidth="278.0">
+                                             <columns>
+                                                <TableColumn fx:id="aClassNumberStudentCol" prefWidth="75.0" text="Numero" />
+                                                <TableColumn fx:id="aClassNameStudentCol" prefWidth="200.0" text="Nome" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane fx:id="associateStudentaClassPane" animated="false" collapsible="false" layoutX="129.0" layoutY="94.0" prefHeight="143.0" prefWidth="196.0" text="Associar Aluno" textAlignment="CENTER" visible="false">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="119.0" prefWidth="96.0">
+                                       <children>
+                                          <Button layoutX="8.0" layoutY="69.0" mnemonicParsing="false" onAction="#handleAssociateStudentaClassSubmit" prefHeight="27.0" prefWidth="81.0" text="Inserir" />
+                                          <ComboBox fx:id="allStudentsAssociateaClassComboBox" layoutX="104.0" layoutY="14.0" prefHeight="27.0" prefWidth="80.0" promptText="Aluno" />
+                                          <ComboBox fx:id="allClasstoAssociateStudentsComboBox" layoutX="9.0" layoutY="14.0" prefHeight="27.0" prefWidth="80.0" promptText="Turma" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab onSelectionChanged="#handleShowCurricularUnitsTable" text="U. Curriculares">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="curricularUnitTable" layoutX="100.0" prefHeight="367.0" prefWidth="501.0">
+                                <columns>
+                                  <TableColumn fx:id="idCurricularUnitCol" prefWidth="78.0" text="Sigla" />
+                                  <TableColumn fx:id="ectsCurricularUnitCol" prefWidth="65.0" text="Ects" />
+                                    <TableColumn fx:id="yearCurricularUnitCol" prefWidth="66.0" text="Ano" />
+                                    <TableColumn fx:id="nameCurricularUnitCol" prefWidth="291.0" text="Nome" />
+                                </columns>
+                              </TableView>
+                              <VBox prefHeight="326.0" prefWidth="100.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#handleRemoveCurricularUnit" prefHeight="50.0" prefWidth="77.0" text="Remover">
+                                       <VBox.margin>
+                                          <Insets left="10.0" top="30.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Button layoutX="20.0" layoutY="40.0" mnemonicParsing="false" onAction="#handleShowNowCurricularUnit" prefHeight="50.0" prefWidth="77.0" text="Agora">
+                                       <VBox.margin>
+                                          <Insets left="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Button layoutX="20.0" layoutY="77.0" mnemonicParsing="false" onAction="#handleShowCUnitTeachersButton" prefHeight="50.0" prefWidth="77.0" text="Listar">
+                                       <VBox.margin>
+                                          <Insets left="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Button layoutX="20.0" layoutY="160.0" mnemonicParsing="false" onAction="#handleAssociateTeacherToCurricularUnitsButton" prefHeight="50.0" prefWidth="77.0" text="Associar&#10;Professor">
+                                       <VBox.margin>
+                                          <Insets left="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Button layoutX="20.0" layoutY="220.0" mnemonicParsing="false" onAction="#handleAssociateStudentsToCurricularUnitsButton" prefHeight="50.0" prefWidth="77.0" text="Associar&#10;Aluno">
+                                       <VBox.margin>
+                                          <Insets left="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                              <HBox layoutX="3.0" layoutY="365.0" prefHeight="41.0" prefWidth="593.0">
+                                 <children>
+                                    <TextField fx:id="curricularUnitidField" prefHeight="27.0" prefWidth="70.0" promptText="Sigla">
+                                       <HBox.margin>
+                                          <Insets top="10.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <TextField fx:id="curricularUnitEctsField" layoutX="15.0" layoutY="20.0" prefHeight="27.0" prefWidth="55.0" promptText="ECTS">
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="10.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <TextField fx:id="curricularUnitYearField" layoutX="144.0" layoutY="20.0" prefHeight="27.0" prefWidth="56.0" promptText="Ano">
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="10.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <TextField fx:id="curricularUnitNameField" layoutX="431.0" layoutY="20.0" prefHeight="27.0" prefWidth="312.0" promptText="Nome">
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="10.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <Button mnemonicParsing="false" onAction="#handleAddCurricularUnitSubmit" prefHeight="27.0" prefWidth="69.0" text="Add">
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </HBox>
+                              <TitledPane fx:id="removeCurricularUnitPane" animated="false" collapsible="false" layoutY="175.0" prefHeight="151.0" prefWidth="99.0" text="Remover" textAlignment="CENTER" visible="false">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="119.0" prefWidth="96.0">
+                                       <children>
+                                          <Button layoutX="7.0" layoutY="93.0" mnemonicParsing="false" onAction="#handleRemoveCurricularUnitSubmit" prefHeight="27.0" prefWidth="83.0" text="Remover" />
+                                          <ComboBox fx:id="curricularUnitComboBox" layoutX="9.0" layoutY="14.0" prefHeight="27.0" prefWidth="80.0" promptText="UC" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane fx:id="curricularUnitNowPane" animated="false" collapsible="false" layoutX="177.0" layoutY="93.0" prefHeight="176.0" prefWidth="281.0" text="Agora" textAlignment="CENTER" visible="false">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="119.0" prefWidth="96.0">
+                                       <children>
+                                          <TableView fx:id="nowCurricularUnitTable" prefHeight="149.0" prefWidth="280.0">
+                                            <columns>
+                                              <TableColumn fx:id="nowCurricularUnitNameCol" prefWidth="279.0" text="Nome" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane fx:id="associateTeacherToCurricularUnitPane" animated="false" collapsible="false" layoutX="119.0" layoutY="185.0" prefHeight="151.0" prefWidth="103.0" text="Associar Professor" textAlignment="CENTER" visible="false">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="123.0" prefWidth="105.0">
+                                       <children>
+                                          <Button layoutX="7.0" layoutY="93.0" mnemonicParsing="false" onAction="#handleAssociateTeacherToCurricularUnitSubmit" prefHeight="27.0" prefWidth="83.0" text="Associar" />
+                                          <ComboBox fx:id="allCurricularUnitsToAssociateComboBox" layoutX="9.0" layoutY="14.0" onAction="#handleShowAllTeachersToAssociate" prefHeight="27.0" prefWidth="80.0" promptText="UC" />
+                                          <ComboBox fx:id="allTeachersToCurricularComboBox" layoutX="9.0" layoutY="48.0" prefHeight="27.0" prefWidth="80.0" promptText="Prof" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane fx:id="cUnitsStudentsAssociatePane" animated="false" collapsible="false" layoutX="166.0" layoutY="82.0" prefHeight="159.0" prefWidth="280.0" text="Associar Estudantes" textAlignment="CENTER" visible="false">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="148.0" prefWidth="280.0">
+                                       <children>
+                                          <ComboBox fx:id="allCurricularUnitsAssociateStudentComboBox" layoutX="9.0" layoutY="14.0" onAction="#handleShowAllStudentsWithoutcUnit" prefHeight="27.0" prefWidth="259.0" promptText="Unidade Curricular" />
+                                          <ComboBox fx:id="studentsWithoutcUnitComboBox" layoutX="9.0" layoutY="48.0" prefHeight="27.0" prefWidth="259.0" promptText="Estudante" />
+                                          <Button layoutX="111.0" layoutY="89.0" mnemonicParsing="false" onAction="#handleSubmitStudentcUnitSubmit" text="Button" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TabPane fx:id="teachersandStudentsCUnitsPane" layoutX="163.0" layoutY="71.0" prefHeight="235.0" prefWidth="379.0" tabClosingPolicy="UNAVAILABLE" visible="false">
+                                <tabs>
+                                  <Tab text="Professor">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <TitledPane animated="false" layoutY="-32.0" prefHeight="240.0" prefWidth="379.0" text="untitled">
+                                                  <content>
+                                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                         <children>
+                                                            <HBox prefHeight="55.0" prefWidth="379.0">
+                                                               <children>
+                                                                  <ComboBox fx:id="allCurricularUnitsComboBox" onAction="#handleShowTeachersCUnits" prefHeight="27.0" prefWidth="259.0" promptText="Unidade Curricular">
+                                                                     <HBox.margin>
+                                                                        <Insets left="10.0" top="10.0" />
+                                                                     </HBox.margin>
+                                                                  </ComboBox>
+                                                               </children>
+                                                            </HBox>
+                                                            <TableView fx:id="cUnitsTeachersTable" layoutX="4.0" layoutY="41.0" prefHeight="166.0" prefWidth="368.0">
+                                                               <columns>
+                                                                  <TableColumn fx:id="cUnitsTeacherNumberCol" prefWidth="75.0" text="Numero" />
+                                                                  <TableColumn fx:id="cUnitsTeachersNameCol" prefWidth="292.0" text="Nome" />
+                                                               </columns>
+                                                            </TableView>
+                                                         </children>
+                                                      </AnchorPane>
+                                                  </content>
+                                                </TitledPane>
+                                             </children>
+                                          </AnchorPane>
+                                    </content>
+                                  </Tab>
+                                  <Tab text="Alunos">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <TitledPane animated="false" layoutY="-30.0" prefHeight="236.0" prefWidth="379.0" text="untitled">
+                                                   <content>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                         <children>
+                                                            <HBox prefHeight="55.0" prefWidth="379.0">
+                                                               <children>
+                                                                  <ComboBox fx:id="allCurricularUnitsComboBox1" onAction="#handleShowStudentsCUnits" prefHeight="27.0" prefWidth="259.0" promptText="Unidade Curricular">
+                                                                     <HBox.margin>
+                                                                        <Insets left="10.0" top="10.0" />
+                                                                     </HBox.margin>
+                                                                  </ComboBox>
+                                                               </children>
+                                                            </HBox>
+                                                            <TableView fx:id="cUnitsStudentsTable" layoutX="4.0" layoutY="41.0" prefHeight="161.0" prefWidth="367.0">
+                                                               <columns>
+                                                                  <TableColumn fx:id="cUnitsStudentsNumberCol" prefWidth="75.0" text="Numero" />
+                                                                  <TableColumn fx:id="cUnitsStudentsNameCol" prefWidth="291.0" text="Nome" />
+                                                               </columns>
+                                                            </TableView>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </content>
+                                                </TitledPane>
+                                             </children>
+                                          </AnchorPane>
+                                    </content>
+                                  </Tab>
+                                </tabs>
+                              </TabPane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab onSelectionChanged="#handleShowStudentsTable" text="Estudantes">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="studentsTable" layoutX="94.0" prefHeight="402.0" prefWidth="506.0">
+                                <columns>
+                                  <TableColumn fx:id="numberStudentsCol" prefWidth="75.0" text="Numero" />
+                                  <TableColumn fx:id="nameStudentsCol" prefWidth="109.0" text="Nome" />
+                                    <TableColumn fx:id="registrationStudentsCol" prefWidth="122.0" text="Registro" />
+                                    <TableColumn fx:id="emailStudentsCol" prefWidth="197.0" text="Email" />
+                                </columns>
+                              </TableView>
+                              <VBox layoutY="1.0" prefHeight="368.0" prefWidth="94.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#handleShowBusyStudentsNow" prefHeight="50.0" prefWidth="75.0" text="Ocupados">
+                                       <VBox.margin>
+                                          <Insets left="10.0" top="30.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Button layoutX="20.0" layoutY="40.0" mnemonicParsing="false" onAction="#handleShowStudentsaClassButton" prefHeight="50.0" prefWidth="75.0" text="Horario">
+                                       <VBox.margin>
+                                          <Insets left="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Button layoutX="20.0" layoutY="100.0" mnemonicParsing="false" onAction="#handleRemoveStudentButton" prefHeight="50.0" prefWidth="75.0" text="Remover">
+                                       <VBox.margin>
+                                          <Insets left="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Button layoutX="20.0" layoutY="100.0" mnemonicParsing="false" onAction="#handleInsertnewStudentButton" prefHeight="50.0" prefWidth="75.0" text="Inserir">
+                                       <VBox.margin>
+                                          <Insets left="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                              <TitledPane fx:id="studentsBusyPane" animated="false" collapsible="false" layoutX="162.0" layoutY="88.0" prefHeight="226.0" prefWidth="279.0" text="Estudantes Ocupados Agora" textAlignment="CENTER" visible="false">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="119.0" prefWidth="96.0">
+                                       <children>
+                                          <TableView fx:id="busyStudentsTable" prefHeight="199.0" prefWidth="278.0">
+                                             <columns>
+                                                <TableColumn fx:id="busyStudentsNumberCol" prefWidth="81.0" text="Numero" />
+                                                <TableColumn fx:id="busyStudentsNameCol" prefWidth="196.0" text="Nome" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane fx:id="studentsaClassPane" animated="false" collapsible="false" layoutX="172.0" layoutY="98.0" prefHeight="226.0" prefWidth="279.0" text="Horario do aluno" textAlignment="CENTER" visible="false">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="119.0" prefWidth="96.0">
+                                       <children>
+                                          <TableView fx:id="aClassStudentTable" layoutY="43.0" prefHeight="156.0" prefWidth="278.0">
+                                             <columns>
+                                                <TableColumn fx:id="aClassStudentsclassroomCol" prefWidth="53.0" text="Sala" />
+                                                <TableColumn fx:id="aClassStudentsstartCol" prefWidth="57.0" text="Inicio" />
+                                                <TableColumn fx:id="aClassStudentsendCol" prefWidth="60.0" text="Fim" />
+                                                <TableColumn fx:id="aClassStudentsdayCol" prefWidth="106.0" text="Dia" />
+                                             </columns>
+                                          </TableView>
+                                          <ComboBox fx:id="allStudentsComboBox" layoutX="14.0" layoutY="14.0" onAction="#handleShowStudentsaClass" prefWidth="150.0" promptText="Aluno" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <HBox layoutY="363.0" prefHeight="43.0" prefWidth="593.0">
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </HBox>
+                              <TitledPane fx:id="removeStudentPane" animated="false" collapsible="false" layoutY="218.0" prefHeight="150.0" prefWidth="95.0" text="Remover Aluno" textAlignment="CENTER" visible="false">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="119.0" prefWidth="96.0">
+                                       <children>
+                                          <Button layoutX="7.0" layoutY="93.0" mnemonicParsing="false" onAction="#handleRemoveStudentSubmit" prefHeight="27.0" prefWidth="83.0" text="Remover" />
+                                          <ComboBox fx:id="allStudentstoRemoveComboBox" layoutX="9.0" layoutY="14.0" prefHeight="27.0" prefWidth="80.0" promptText="Estudante" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane fx:id="insertStudentPane" animated="false" collapsible="false" layoutX="172.0" layoutY="98.0" prefHeight="207.0" prefWidth="344.0" text="Inserir Aluno" textAlignment="CENTER" visible="false">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="119.0" prefWidth="96.0">
+                                       <children>
+                                          <TextField fx:id="numberInsertStudentField" layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="78.0" promptText="Numero" />
+                                          <TextField fx:id="nameStudentInsertField" layoutX="14.0" layoutY="52.0" prefHeight="27.0" prefWidth="315.0" promptText="Nome" />
+                                          <TextField fx:id="addressStudentInsertField" layoutX="103.0" layoutY="14.0" prefHeight="27.0" prefWidth="226.0" promptText="Morada" />
+                                          <TextField fx:id="emailStudentInsertField" layoutX="14.0" layoutY="90.0" prefHeight="27.0" prefWidth="315.0" promptText="Email" />
+                                          <TextField fx:id="birthStudentInsertField" layoutX="14.0" layoutY="138.0" prefHeight="27.0" prefWidth="222.0" promptText="Nascimento - dd/mm/yyyy" />
+                                          <Button layoutX="251.0" layoutY="138.0" mnemonicParsing="false" onAction="#handleInsertNewStudentSubmit" prefHeight="27.0" prefWidth="77.0" text="Inserir" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab onSelectionChanged="#handleShowTeachersTable" text="Professores">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="teachersTable" layoutX="94.0" prefHeight="378.0" prefWidth="506.0">
+                                 <columns>
+                                    <TableColumn fx:id="teacherNumberCol" prefWidth="75.0" text="Numero" />
+                                    <TableColumn fx:id="nameTeacherCol" prefWidth="109.0" text="Nome" />
+                                    <TableColumn fx:id="registrationTeacherCol" prefWidth="107.0" text="Registro" />
+                                    <TableColumn fx:id="emailTeacherCol" prefWidth="212.0" text="Email" />
+                                 </columns>
+                              </TableView>
+                              <VBox prefHeight="368.0" prefWidth="94.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#handleShowAttendanceButton" prefHeight="50.0" prefWidth="75.0" text="Horario&#10;Atend.">
+                                       <VBox.margin>
+                                          <Insets left="10.0" top="30.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Button layoutX="20.0" layoutY="40.0" mnemonicParsing="false" onAction="#handleShowaClassTeacherButton" prefHeight="50.0" prefWidth="75.0" text="Horario">
+                                       <VBox.margin>
+                                          <Insets left="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#handleShowBusyTeachersNow" prefHeight="50.0" prefWidth="75.0" text="Ocupados">
+                                       <VBox.margin>
+                                          <Insets left="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Button layoutX="20.0" layoutY="105.0" mnemonicParsing="false" onAction="#handleRemoveTeacherButton" prefHeight="50.0" prefWidth="75.0" text="Remover">
+                                       <VBox.margin>
+                                          <Insets left="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                              <TitledPane fx:id="teacherAttendancePane" animated="false" collapsible="false" layoutX="116.0" layoutY="88.0" prefHeight="225.0" prefWidth="281.0" text="Horario de Atendimento" textAlignment="CENTER" visible="false">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="119.0" prefWidth="96.0">
+                                       <children>
+                                          <ComboBox fx:id="allTeachersComboBox" layoutX="9.0" layoutY="14.0" onAction="#handleShowTeacherAttendance" prefHeight="27.0" prefWidth="105.0" promptText="Professor" />
+                                          <TableView fx:id="attendanceShowTable" layoutY="45.0" prefHeight="154.0" prefWidth="278.0">
+                                            <columns>
+                                              <TableColumn fx:id="classroomAttendanceCol" prefWidth="75.0" text="Sala" />
+                                              <TableColumn fx:id="startAttendanceCol" prefWidth="59.0" text="Inicio" />
+                                                <TableColumn fx:id="endAttendanceCol" prefWidth="62.0" text="Fim" />
+                                                <TableColumn fx:id="dayattendanceCol" prefWidth="83.0" text="Dia" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane fx:id="teachersBusyPane" animated="false" collapsible="false" layoutX="126.0" layoutY="98.0" prefHeight="225.0" prefWidth="281.0" text="Professores Ocupados Agora" textAlignment="CENTER" visible="false">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="119.0" prefWidth="96.0">
+                                       <children>
+                                          <TableView fx:id="busyTeachersTable" prefHeight="199.0" prefWidth="278.0">
+                                             <columns>
+                                                <TableColumn fx:id="busyTeacherNumberCol" prefWidth="81.0" text="Numero" />
+                                                <TableColumn fx:id="busyTeacherNameCol" prefWidth="196.0" text="Nome" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane fx:id="teacheraClassPane" animated="false" collapsible="false" layoutX="126.0" layoutY="98.0" prefHeight="225.0" prefWidth="281.0" text="Horario" textAlignment="CENTER" visible="false">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="119.0" prefWidth="96.0">
+                                       <children>
+                                          <ComboBox fx:id="allTeachersComboBox1" layoutX="9.0" layoutY="14.0" onAction="#handleShowTeacheraClass" prefHeight="27.0" prefWidth="105.0" promptText="Professor" />
+                                          <TableView fx:id="aClassTeacherShowTable" layoutY="45.0" prefHeight="154.0" prefWidth="278.0">
+                                             <columns>
+                                                <TableColumn fx:id="classroomaClassTeacherCol" prefWidth="75.0" text="Sala" />
+                                                <TableColumn fx:id="startaClassTeacherCol" prefWidth="59.0" text="Inicio" />
+                                                <TableColumn fx:id="endaClassTeacherCol" prefWidth="62.0" text="Fim" />
+                                                <TableColumn fx:id="dayaClassTeacherCol" prefWidth="83.0" text="Dia" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane fx:id="removeTeacherPane" animated="false" collapsible="false" layoutY="252.0" prefHeight="117.0" prefWidth="95.0" text="Remover" textAlignment="CENTER" visible="false">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="119.0" prefWidth="96.0">
+                                       <children>
+                                          <Button layoutX="7.0" layoutY="93.0" mnemonicParsing="false" onAction="#handleChangeLessonClassroomSubmit" prefHeight="27.0" prefWidth="83.0" text="Alterar" />
+                                          <ComboBox fx:id="allTeacherToRemoveComboBox" layoutX="9.0" layoutY="14.0" prefHeight="27.0" prefWidth="80.0" promptText="Professor" />
+                                          <Button layoutX="9.0" layoutY="48.0" mnemonicParsing="false" onAction="#handleRemoveTeacherSubmit" prefHeight="27.0" prefWidth="77.0" text="Remover" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>

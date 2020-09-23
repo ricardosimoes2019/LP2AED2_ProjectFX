@@ -1,0 +1,16 @@
+Classrooms Dump File:
+
+Removed at: 4/6/2020 19:30
+university.Classroom@124402e0
+
+Removed at: 4/6/2020 19:48
+Classroom{name='107', studentsLimit=10, about='', lessons=[]}
+
+Removed at: 4/6/2020 19:49
+Classroom{name='205', studentsLimit=25, about='', lessons=[]}
+
+Removed at: 4/6/2020 19:50
+Classroom{name='107', studentsLimit=10, about=''125
+
+Removed at: 4/6/2020 19:50
+Classroom{name='205', studentsLimit=25, about=''125

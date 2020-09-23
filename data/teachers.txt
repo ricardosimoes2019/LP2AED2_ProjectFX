@@ -1,0 +1,10 @@
+idnumber;name;address;birth;email;registration
+34678;Rui Moreira;Porto;24/5/1970;rmoreira@ufp.edu.pt;6/7/2000
+31242;Ana Beatriz Gomes;Porto;26/10/1990;argomes@ufp.edu.pt;10/7/2014
+23545;Cristophe Soares;Aveiro;12/2/1971;csoares@ufp.edu.pt;10/8/2001
+35122;Pedro Sobral;Coimbra;13/4/1968;pmsobral@ufp.edu.pt;5/6/1999
+34212;André Ribeiro Pinto;Porto;17/7/1989;arpinto@ufp.edu.pt;10/8/2014
+36431;José Manuel Torres;Vila Real;14/3/1972;jtorres@ufp.edu.pt;10/8/2001
+36512;Nuno Magalhães Ribeiro;Porto;24/5/1969;nribeiro@ufp.edu.pt;6/7/2000
+35662;Paulo Rurato;Porto;24/5/1969;prurato@ufp.edu.pt;6/7/2000
+35662;João;Porto;24/5/1969;prurato@ufp.edu.pt;6/7/2000;     {{erro: já existe uma professor com este id}}

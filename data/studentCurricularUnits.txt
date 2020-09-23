@@ -1,0 +1,11 @@
+number;idCurricularUnits
+35384;LP2-AED2-SO-MUL2-HRDS
+35188;LP2-SO-AED2-LPI
+35621;AED2-HRDS-MUL2
+34123;AED2-SO-LPI
+33456;AED2-SO-LPI
+35124;AED2-LP2
+32567;LP2-SO
+36432;AED2
+452332;AED2;    {{erro: não existe o aluno com este id}}
+35384;AED1;     {{erro: não existe uma Unidade Curricular com este id}}

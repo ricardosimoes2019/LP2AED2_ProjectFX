@@ -1,0 +1,8 @@
+id;name;ects;year
+LP2;Linguagens de Programação 2;7;2020
+AED2;Algoritmos e Estruturas de Dados 2;6;2020
+SO;Sistemas Operativos;7;2020
+MUL2;Multimédia 2;6;2020
+LPI;Laboratório de Projeto Integrado;7;2020
+HRDS;Hardware e Sensores;6;2020
+HRDS;Há resina de sal;7;2020;   {{erro:já existe uma Unidade Curricular com este id}}
